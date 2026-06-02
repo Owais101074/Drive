@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+       /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORM CARD */
+.form {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* INPUT FIELDS */
+.form input {
+    width: 100%;
+    border-radius: 25px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder */
+.form input::placeholder {
+    color: #cbd5f5;
+}
+
+/* Focus */
+.form input:focus {
+    border-color: #3b82f6;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* BUTTON */
+.form button {
+    width: 100%;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.form p {
+    color: white;
+    margin-top: 16px;
+}
+
+.form button:hover {
+    background: #2563eb;
+}
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Enter your name">
+            <br>
+            <input type="email" name="email" placeholder="Enter your email">
+            <br>
+            <input type="password" name="password" placeholder="Enter your password">
+            <br>
+            <button>REGISTER</button>
+            <P>Already have an account.</P>
+            <button>LOGIN</button>          
+        </form>
+    </div>
+</body>
+
+</html>

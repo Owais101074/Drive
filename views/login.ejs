@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORM CARD */
+.form {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    width: 320px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* FORM LAYOUT */
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* INPUT FIELDS */
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    border: 1px solid #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder */
+.form input::placeholder {
+    color: #cbd5f5;
+}
+
+/* Focus */
+.form input:focus {
+    border-color: #3b82f6;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* BUTTON */
+.form button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #3b82f6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background: #2563eb;
+}
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="" method="post">
+            <input type="email" name="email" placeholder="Enter your email">
+            <br>
+            <input type="password" name="password" placeholder="Enter your password">
+            <br>
+            <button>LOGIN</button>
+        </form>
+    </div>
+</body>
+
+</html>

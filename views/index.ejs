@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive</title>
+    <style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 15px 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* NAVBAR BUTTONS */
+.navbar button {
+    border: none;
+    background: transparent;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: #e2e8f0;
+    color: #1e293b;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+/* CENTER CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+/* FORM CARD */
+.form {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+.form h1 {
+    margin-bottom: 25px;
+    color: #f1f5f9;
+    font-size: 22px;
+}
+
+/* FILE INPUT */
+.form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px dashed #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.form input[type="file"]:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #e2e8f0;
+}
+
+/* File button */
+.form input[type="file"]::file-selector-button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #e2e8f0;
+    color: #1e293b;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.form input[type="file"]::file-selector-button:hover {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+/* Focus effect */
+.form input[type="file"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* SUBMIT BUTTON */
+.form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: #3b82f6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.form button:hover {
+    background: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <button><a href="/logout">LOGOUT</a></button>
+    </div>
+
+    <!-- Centered Form -->
+    <div class="container">
+        <div class="form">
+            <form action="/create" method="post" enctype="multipart/form-data">
+                <h1>MINI GOOGLE DRIVE</h1>
+                <input type="file" name="file">
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
