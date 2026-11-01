@@ -6,7 +6,7 @@ A Google Drive-style cloud storage app: register, log in, upload files and brows
 
 - Account registration and login
 - bcrypt password hashing
-- JWT issued on registration and stored in a cookie to protect private routes
+- JWT issued on registration and stored in a cookie
 - File uploads handled with Multer, saved on disk with collision-safe filenames
 - Server-rendered pages (register, login, dashboard) using EJS and Tailwind CSS
 
@@ -55,7 +55,7 @@ Drive/
 | GET | `/` | Registration page |
 | POST | `/register` | Create an account and set the auth cookie |
 | GET | `/login` | Login page |
-| POST | `/login` | Authenticate a user |
+| POST | `/login` | Log in with an existing account |
 | GET | `/index` | File dashboard |
 | POST | `/create` | Upload a file |
 | GET | `/logout` | Clear the session |
